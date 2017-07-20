@@ -1,0 +1,553 @@
+Пройдено обучение GitHowTo
+
+root@101balkancar:~# cd "Рабочий стол/Стажировка/git_tutorial/work"
+bash: cd: Рабочий стол/Стажировка/git_tutorial/work: Нет такого файла или каталога
+root@101balkancar:~# cd "Рабочий стол/Стажировка/git_tutorial"
+bash: cd: Рабочий стол/Стажировка/git_tutorial: Нет такого файла или каталога
+root@101balkancar:~# cd "Рабочий стол/"
+root@101balkancar:~/Рабочий стол# cd "Стажировка"
+bash: cd: Стажировка: Нет такого файла или каталога
+root@101balkancar:~/Рабочий стол# cd "Стажеровка"
+root@101balkancar:~/Рабочий стол/Стажеровка# cd "git_tutorial/work"root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# ls
+hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# vi README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat README
+This is the Hello World example from the git tutorial
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls
+index.html  lib  README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -A
+.git  .gitconfig  index.html  lib  README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Added README'
+[master 0ed3f33] Added README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* 0ed3f33 2017-07-20 | Added README (HEAD -> master) [Balanovskiy]
+| * 702f0fe 2017-07-19 | Updated index.html (style) [Balanovskiy]
+| * 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+| * 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout style
+Переключено на ветку «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git merge master
+Merge made by the 'recursive' strategy.
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+*   2ae768b 2017-07-20 | Merge branch 'master' into style (HEAD -> style) [Balanovskiy]
+|\  
+| * 0ed3f33 2017-07-20 | Added README (master) [Balanovskiy]
+* | 702f0fe 2017-07-19 | Updated index.html [Balanovskiy]
+* | 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+* | 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git branch
+  master
+* style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 0ed3f33 2017-07-20 | Added README (HEAD -> master) [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Life is good!'
+[master 689d7cd] Life is good!
+ 1 file changed, 1 insertion(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* 689d7cd 2017-07-20 | Life is good! (HEAD -> master) [Balanovskiy]
+| *   2ae768b 2017-07-20 | Merge branch 'master' into style (style) [Balanovskiy]
+| |\  
+| |/  
+|/|   
+* | 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+| * 702f0fe 2017-07-19 | Updated index.html [Balanovskiy]
+| * 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+| * 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls
+index.html  lib  README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout style
+Переключено на ветку «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls
+index.html  lib  README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout style
+Переключено на ветку «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке style
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git merge master
+Автослияние lib/hello.html
+КОНФЛИКТ (содержимое): Конфликт слияния в lib/hello.html
+Не удалось провести автоматическое слияние; исправьте конфликты и сделайте коммит результата.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Merge master fixed conflict'
+[style 138aa30] Merge master fixed conflict
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+*   138aa30 2017-07-20 | Merge master fixed conflict (HEAD -> style) [Balanovskiy]
+|\  
+| * 689d7cd 2017-07-20 | Life is good! (master) [Balanovskiy]
+* |   2ae768b 2017-07-20 | Merge branch 'master' into style [Balanovskiy]
+|\ \  
+| |/  
+| * 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* | 702f0fe 2017-07-19 | Updated index.html [Balanovskiy]
+* | 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+* | 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout style
+Уже на «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+*   138aa30 2017-07-20 | Merge master fixed conflict (HEAD -> style) [Balanovskiy]
+|\  
+| * 689d7cd 2017-07-20 | Life is good! (master) [Balanovskiy]
+* |   2ae768b 2017-07-20 | Merge branch 'master' into style [Balanovskiy]
+|\ \  
+| |/  
+| * 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* | 702f0fe 2017-07-19 | Updated index.html [Balanovskiy]
+* | 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+* | 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git reset --hard 702f0fe
+HEAD сейчас на 702f0fe Updated index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 702f0fe 2017-07-19 | Updated index.html (HEAD -> style) [Balanovskiy]
+* 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* 689d7cd 2017-07-20 | Life is good! (master) [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+| * 702f0fe 2017-07-19 | Updated index.html (HEAD -> style) [Balanovskiy]
+| * 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+| * 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 689d7cd 2017-07-20 | Life is good! (HEAD -> master) [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* 689d7cd 2017-07-20 | Life is good! (HEAD -> master) [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+| * 702f0fe 2017-07-19 | Updated index.html (style) [Balanovskiy]
+| * 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+| * 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git reset --hard 0ed3f33
+HEAD сейчас на 0ed3f33 Added README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* 0ed3f33 2017-07-20 | Added README (HEAD -> master) [Balanovskiy]
+| * 702f0fe 2017-07-19 | Updated index.html (style) [Balanovskiy]
+| * 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+| * 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+|/  
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout style
+Переключено на ветку «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git rebase master
+Сначала перематываем указатель текущего коммита, чтобы применить ваши изменения поверх него…
+Применение: Added css stylesheet
+Применение: Hello uses style.css
+Применение: Updated index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* f4b69ba 2017-07-19 | Updated index.html (HEAD -> style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README (master) [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* f4b69ba 2017-07-19 | Updated index.html (HEAD -> style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README (master) [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git branch
+  master
+* style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* f4b69ba 2017-07-19 | Updated index.html (style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README (HEAD -> master) [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git merge style
+Обновление 0ed3f33..f4b69ba
+Fast-forward
+ index.html     | 3 +++
+ lib/hello.html | 1 +
+ lib/style.css  | 4 ++++
+ 3 files changed, 8 insertions(+)
+ create mode 100644 lib/style.css
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* f4b69ba 2017-07-19 | Updated index.html (HEAD -> master, style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# свюю
+bash: свюю: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cd..
+bash: cd..: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cd ..
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# pwd
+/root/Рабочий стол/Стажеровка/git_tutorial/work
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# ls
+hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# git clone hello cloned_hello
+Клонирование в «cloned_hello»…
+готово.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# ls
+cloned_hello  hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd clones_hello
+bash: cd: clones_hello: Нет такого файла или каталога
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd cloned_hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# ls
+index.html  lib  README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git hist
+* f4b69ba 2017-07-19 | Updated index.html (HEAD -> master, origin/style, origin/master, origin/HEAD) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch
+* master
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cd ..
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* f4b69ba 2017-07-19 | Updated index.html (HEAD -> master, style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git branch
+* master
+  style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cd ..
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd cloned_hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git remote
+origin
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git remote show origin
+* внешний репозиторий origin
+  URL для извлечения: /root/Рабочий стол/Стажеровка/git_tutorial/work/hello
+  URL для отправки: /root/Рабочий стол/Стажеровка/git_tutorial/work/hello
+  HEAD ветка: master
+    Внешние ветки:
+    master отслеживается
+    style  отслеживается
+  Локальная ветка, настроенная для «git pull»:
+    master будет слита с внешней веткой master
+  Локальная ссылка, настроенная для «git push»:
+    master будет отправлена в master (уже актуальна)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cd ../hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Changet README in original repo'
+[master e8d78cb] Changet README in original repo
+ 1 file changed, 1 insertion(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cd../cloned_hello
+bash: cd../cloned_hello: Нет такого файла или каталога
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cd ../cloned_hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git fetch
+remote: Подсчет объектов: 3, готово.
+remote: Сжатие объектов: 100% (3/3), готово.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Распаковка объектов: 100% (3/3), готово.
+Из /root/Рабочий стол/Стажеровка/git_tutorial/work/hello
+   f4b69ba..e8d78cb  master     -> origin/master
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git hist -all
+fatal: неопознанный аргумент: -all
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git hist --all
+* e8d78cb 2017-07-20 | Changet README in original repo (origin/master, origin/HEAD) [Balanovskiy]
+* f4b69ba 2017-07-19 | Updated index.html (HEAD -> master, origin/style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cat README
+This is the Hello World example from the git tutorial
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch
+* master
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git merge origin/master
+Обновление f4b69ba..e8d78cb
+Fast-forward
+ README | 1 +
+ 1 file changed, 1 insertion(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cat README
+This is the Hello World example from the git tutorial
+(changed in original)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git hist --all
+* e8d78cb 2017-07-20 | Changet README in original repo (HEAD -> master, origin/master, origin/HEAD) [Balanovskiy]
+* f4b69ba 2017-07-19 | Updated index.html (origin/style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch --track style origin/style
+Ветка style отслеживает внешнюю ветку style из origin.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git brach -a
+git: «brach» не является командой git. Смотрите «git --help».
+
+Возможно, вы имели в виду это?
+	branch
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch -a
+* master
+  style
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch 
+* master
+  style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git hist --max-count=2
+* e8d78cb 2017-07-20 | Changet README in original repo (HEAD -> master, origin/master, origin/HEAD) [Balanovskiy]
+* f4b69ba 2017-07-19 | Updated index.html (origin/style, style) [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cd ..
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# git clone --bare hello hello.git
+Клонирование в голый репозиторий «hello.git»…
+готово.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# ls hello.git
+branches  config  description  HEAD  hooks  info  objects  packed-refs  refs
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# ls hello
+index.html  lib  README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git remote add shared ../hello.gitroot@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+M	README
+Уже на «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      README
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add README
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Added shared comment to readme'
+[master 81b90a4] Added shared comment to readme
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git push shared master
+Подсчет объектов: 3, готово.
+Delta compression using up to 2 threads.
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 399 bytes | 0 bytes/s, готово.
+Total 3 (delta 0), reused 0 (delta 0)
+To ../hello.git
+   e8d78cb..81b90a4  master -> master
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cd ../cloned_hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# gir remote add shared ../
+bash: gir: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git remote add shared ../
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch --track shared master
+Ветка shared отслеживает локальную ветку master.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git pull
+remote: Подсчет объектов: 3, готово.
+remote: Сжатие объектов: 100% (3/3), готово.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Распаковка объектов: 100% (3/3), готово.
+Из /root/Рабочий стол/Стажеровка/git_tutorial/work/hello
+   e8d78cb..81b90a4  master     -> origin/master
+Обновление e8d78cb..81b90a4
+Fast-forward
+ README | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cat README
+This is the Hello World example from the git tutorial
+(Changed in the original and pushed to shared)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git branch
+* master
+  shared
+  style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# git hist --all
+* 81b90a4 2017-07-20 | Added shared comment to readme (HEAD -> master, origin/master, origin/HEAD) [Balanovskiy]
+* e8d78cb 2017-07-20 | Changet README in original repo (shared) [Balanovskiy]
+* f4b69ba 2017-07-19 | Updated index.html (origin/style, style) [Balanovskiy]
+* edc3716 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 6fc882a 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 0ed3f33 2017-07-20 | Added README [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cd..
+bash: cd..: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/cloned_hello# cd ..
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# git daemon --verbose --export-all --base-path=.
+[2666] Ready to rumble
+
+
+
+
+
+git clone git://localhost/hello.git network_hello
+
+
+^C  
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# git daemon --verbose --export-all --base-path=.
+[2668] Ready to rumble
+[2684] Connection from [::1]:56524
+[2684] Extended attributes (16 bytes) exist <host=localhost>
+[2684] Request upload-pack for '/hello.git'
+[2668] [2684] Disconnected
+
+

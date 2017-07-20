@@ -1,0 +1,1068 @@
+Пройдено до 26 задания
+
+root@101balkancar:~# cd Рабочий\ стол
+root@101balkancar:~/Рабочий стол# cd Стажеровка
+root@101balkancar:~/Рабочий стол/Стажеровка# cd git_tutorial
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial# cd work
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls
+hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -a
+.  ..  .git  .gitconfig  hello.html  .profile
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout 6b16435
+Note: checking out '6b16435'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD сейчас на 6b16435... First Commit
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 6b16435 2017-07-18 | First Commit (HEAD) [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+Hello world
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Предыдущая позиция HEAD была 6b16435... First Commit
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git tag v1
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout v1^
+git: «checko» не является командой git. Смотрите «git --help».
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checko checkout v1^
+git: «checko» не является командой git. Смотрите «git --help».
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checoutv1^
+git: «checoutv1^» не является командой git. Смотрите «git --help».
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checout v1^
+git: «checout» не является командой git. Смотрите «git --help».
+
+Возможно, вы имели в виду это?
+	checkout
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout v1^
+Note: checking out 'v1^'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD сейчас на 909f289... Added standard HTML page tags
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/git tag v1-beta
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout v1
+Предыдущая позиция HEAD была 909f289... Added standard HTML page tags
+HEAD сейчас на c5136d3... Added HTML header
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout v1-beta
+Предыдущая позиция HEAD была c5136d3... Added HTML header
+HEAD сейчас на 909f289... Added standard HTML page tags
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git tag
+v1
+v1-beta
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 909f289 2017-07-18 | Added standard HTML page tags (HEAD, tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist master --all
+* c5136d3 2017-07-18 | Added HTML header (tag: v1, master) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (HEAD, tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout v1
+Предыдущая позиция HEAD была 909f289... Added standard HTML page tags
+HEAD сейчас на c5136d3... Added HTML header
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist master --all
+* c5136d3 2017-07-18 | Added HTML header (HEAD, tag: v1, master) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist master --all
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      hello.html
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	.profile
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	.profile
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      hello.html
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	.profile
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      hello.html
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	.profile
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git reset HEAD hello.html
+Непроиндексированные изменения после сброса:
+M	hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      hello.html
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	.profile
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	.profile
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .gitconfig
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	новый файл:    .gitconfig
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git reset HEAD .gitconfig
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commiy -m "Ooops, we didn't want this commit" 
+git: «commiy» не является командой git. Смотрите «git --help».
+
+Возможно, вы имели в виду это?
+	commit
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m "Ooops, we didn't want this commit" 
+[master 92b3888] Ooops, we didn't want this commit
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+ create mode 100644 .gitconfig
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+nothing to commit, working tree clean
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# HEAD
+Usage: HEAD [-options] <url>...
+    -m <method>   use method for the request (default is 'HEAD')
+    -f            make request even if HEAD believes method is illegal
+    -b <base>     Use the specified URL as base
+    -t <timeout>  Set timeout value
+    -i <time>     Set the If-Modified-Since header on the request
+    -c <conttype> use this content-type for POST, PUT, CHECKIN
+    -a            Use text mode for content I/O
+    -p <proxyurl> use this as a proxy
+    -P            don't load proxy settings from environment
+    -H <header>   send this HTTP header (you can specify several)
+    -C <username>:<password>
+                  provide credentials for basic authentication
+
+    -u            Display method and URL before any response
+    -U            Display request headers (implies -u)
+    -s            Display response status code
+    -S            Display response status chain (implies -u)
+    -e            Display response headers (implies -s)
+    -E            Display whole chain of headers (implies -S and -U)
+    -d            Do not display content
+    -o <format>   Process HTML content in various ways
+
+    -v            Show program version
+    -h            Print this message
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git revent HEAD
+git: «revent» не является командой git. Смотрите «git --help».
+
+Возможно, вы имели в виду это?
+	revert
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git revert HEAD
+[master e109507] Revert "Ooops, we didn't want this commit"
+ 2 files changed, 1 insertion(+), 10 deletions(-)
+ delete mode 100644 .gitconfig
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* e109507 2017-07-19 | Revert "Ooops, we didn't want this commit" (HEAD -> master) [Balanovskiy]
+* 92b3888 2017-07-19 | Ooops, we didn't want this commit [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Стандартные команды Git используемые в различных ситуациях:
+
+создать рабочую область (смотрите также: git help tutorial)
+   clone      Клонирование репозитория в новый каталог
+   init       Создание пустого репозитория Git или переинициализация существующего
+
+работа с текущими изменениями (смотрите также: git help everyday)
+   add        Добавление содержимого файла в индекс
+   mv         Перемещение или переименование файла, каталога или символьной ссылки
+   reset      Сброс текущего состояния HEAD на указанное состояние
+   rm         Удаление файлов из рабочего каталога и индекса
+
+просмотр истории и текущего состояния (смотрите также: git help revisions)
+   bisect     Использовать двоичный поиск изменения, которое вносит ошибку
+   grep       Вывод строк, соответствующих шаблону
+   log        Вывод истории коммитов
+   show       Вывод различных типов объектов
+   status     Вывод состояния рабочего каталога
+
+выращивание, отметка и настройка вашей общей истории
+   branch     Вывод списка, создание или удаление веток
+   checkout   Переключение веток или восстановление файлов в рабочем каталоге
+   commit     Запись изменений в репозиторий
+   diff       Вывод разницы между коммитами, коммитом и рабочим каталогом и т.д.
+   merge      Объединение одной или нескольких историй разработки вместе
+   rebase     Повторно применить коммиты над верхушкой другой ветки
+   tag        Создание, вывод списка, удаление или проверка метки, подписанной с помощью GPG
+
+совместная работа (смотрите также: git help workflows)
+   fetch      Загрузка объектов и ссылок из другого репозитория
+   pull       Извлечение изменений и объединение с другим репозиторием или локальной веткой
+   push       Обновление внешних ссылок и связанных объектов
+
+«git help -а» и «git help -g» выводит список доступных подкоманд и
+некоторые руководства по темам. Запустите «git help <команда>» или
+«git help <термин>», чтобы прочесть о конкретных подкоманде или теме.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+nothing to commit, working tree clean
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* e109507 2017-07-19 | Revert "Ooops, we didn't want this commit" (HEAD -> master) [Balanovskiy]
+* 92b3888 2017-07-19 | Ooops, we didn't want this commit [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git reset C5136d3
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+nothing to commit, working tree clean
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Уже на «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'ooops'
+[master f22a86a] ooops
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* f22a86a 2017-07-19 | ooops (HEAD -> master) [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git revent f22a86a
+git: «revent» не является командой git. Смотрите «git --help».
+
+Возможно, вы имели в виду это?
+	revert
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git revert f22a86a
+[master a2a6d66] Revert "ooops"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* a2a6d66 2017-07-19 | Revert "ooops" (HEAD -> master) [Balanovskiy]
+* f22a86a 2017-07-19 | ooops [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat hello.html
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git tag oops
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* a2a6d66 2017-07-19 | Revert "ooops" (HEAD -> master, tag: oops) [Balanovskiy]
+* f22a86a 2017-07-19 | ooops [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git reset --hard v1
+HEAD сейчас на c5136d3 Added HTML header
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* a2a6d66 2017-07-19 | Revert "ooops" (tag: oops) [Balanovskiy]
+* f22a86a 2017-07-19 | ooops [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git tag -d oops
+Метка «oops» удалена (была a2a6d66)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master, tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Add an author comment'
+[master c4ebe19] Add an author comment
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -amend -m 'Add an author/e-mail comment'
+error: did you mean `--amend` (with two dashes ?)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit --amend -m 'Add an author/e-mail comment'
+[master 905d53c] Add an author/e-mail comment
+ Date: Wed Jul 19 05:22:40 2017 +0300
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 905d53c 2017-07-19 | Add an author/e-mail comment (HEAD -> master) [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# mkdir lib
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git mv hello.html lib
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	переименовано: hello.html -> lib/hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Moved hello.html to lib'
+[master 1247328] Moved hello.html to lib
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename hello.html => lib/hello.html (100%)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 1247328 2017-07-19 | Moved hello.html to lib (HEAD -> master) [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# chout
+bash: chout: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# help
+GNU bash, version 4.3.46(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                                               history [-c] [-d offset] [n] or history -anrw [filename>
+ (( expression ))                                           if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMA>
+ . filename [arguments]                                     jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+ :                                                          kill [-s sigspec | -n signum | -sigspec] pid | jobspec >
+ [ arg... ]                                                 let arg [arg ...]
+ [[ expression ]]                                           local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]                             logout [n]
+ bg [job_spec ...]                                          mapfile [-n count] [-O origin] [-s count] [-t] [-u fd] >
+ bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u>  popd [-n] [+N | -N]
+ break [n]                                                  printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]                          pushd [-n] [+N | -N | dir]
+ caller [expr]                                              pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... es>  read [-ers] [-a array] [-d delim] [-i text] [-n nchars]>
+ cd [-L|[-P [-e]] [-@]] [dir]                               readarray [-n count] [-O origin] [-s count] [-t] [-u fd>
+ command [-pVv] command [arg ...]                           readonly [-aAf] [name[=value] ...] or readonly -p
+ compgen [-abcdefgjksuv] [-o option]  [-A action] [-G glo>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [-o option] [-A act>  select NAME [in WORDS ... ;] do COMMANDS; done
+ compopt [-o|+o option] [-DE] [name ...]                    set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...>
+ continue [n]                                               shift [n]
+ coproc [NAME] command [redirections]                       shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=value] ...]            source filename [arguments]
+ dirs [-clpv] [+N] [-N]                                     suspend [-f]
+ disown [-h] [-ar] [jobspec ...]                            test [expr]
+ echo [-neE] [arg ...]                                      time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name ...]               times
+ eval [arg ...]                                             trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [arguments ...]] [redirect>  true
+ exit [n]                                                   type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or export -p               typeset [-aAfFgilrtux] [-p] name[=value] ...
+ false                                                      ulimit [-SHabcdefilmnpqrstuvxT] [limit]
+ fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [>  umask [-p] [-S] [mode]
+ fg [job_spec]                                              unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS; done               unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS; done              until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name () { COMMANDS ; }     variables - Names and meanings of some shell variables
+ getopts optstring name [arg]                               wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ...]                  while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                                  { COMMANDS ; }
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# vi index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat index.html
+<html>
+<body>
+<iframe src='lib/hello.html' width='200' height='200' />
+</body>
+</html>
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	новый файл:    index.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Add index.html'
+[master 7dce84c] Add index.html
+ 1 file changed, 6 insertions(+)
+ create mode 100644 index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -C .git
+branches  COMMIT_EDITMSG  config  description  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -C .git objects
+ls: невозможно получить доступ к 'objects': Нет такого файла или каталога
+.git:
+branches  COMMIT_EDITMSG  config  description  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -C .git objects
+ls: невозможно получить доступ к 'objects': Нет такого файла или каталога
+.git:
+branches  COMMIT_EDITMSG  config  description  HEAD  hooks  index  info  logs  objects  ORIG_HEAD  refs
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -C .git/objects
+03  12  19  29  38  58  71  80  92  b7  bf  c4  cc  e1  e9  f2    pack
+0d  15  1f  37  53  6b  7d  90  a2  bc  c1  c5  d3  e6  ef  info
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -C .git/objects/03
+0a67fe20faf25ad0f1cea5e71a82fe9ed2f61a
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch .gitconfig
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Стандартные команды Git используемые в различных ситуациях:
+
+создать рабочую область (смотрите также: git help tutorial)
+   clone      Клонирование репозитория в новый каталог
+   init       Создание пустого репозитория Git или переинициализация существующего
+
+работа с текущими изменениями (смотрите также: git help everyday)
+   add        Добавление содержимого файла в индекс
+   mv         Перемещение или переименование файла, каталога или символьной ссылки
+   reset      Сброс текущего состояния HEAD на указанное состояние
+   rm         Удаление файлов из рабочего каталога и индекса
+
+просмотр истории и текущего состояния (смотрите также: git help revisions)
+   bisect     Использовать двоичный поиск изменения, которое вносит ошибку
+   grep       Вывод строк, соответствующих шаблону
+   log        Вывод истории коммитов
+   show       Вывод различных типов объектов
+   status     Вывод состояния рабочего каталога
+
+выращивание, отметка и настройка вашей общей истории
+   branch     Вывод списка, создание или удаление веток
+   checkout   Переключение веток или восстановление файлов в рабочем каталоге
+   commit     Запись изменений в репозиторий
+   diff       Вывод разницы между коммитами, коммитом и рабочим каталогом и т.д.
+   merge      Объединение одной или нескольких историй разработки вместе
+   rebase     Повторно применить коммиты над верхушкой другой ветки
+   tag        Создание, вывод списка, удаление или проверка метки, подписанной с помощью GPG
+
+совместная работа (смотрите также: git help workflows)
+   fetch      Загрузка объектов и ссылок из другого репозитория
+   pull       Извлечение изменений и объединение с другим репозиторием или локальной веткой
+   push       Обновление внешних ссылок и связанных объектов
+
+«git help -а» и «git help -g» выводит список доступных подкоманд и
+некоторые руководства по темам. Запустите «git help <команда>» или
+«git help <термин>», чтобы прочесть о конкретных подкоманде или теме.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git --global
+Unknown option: --global
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git -global
+Unknown option: -global
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git global
+git: «global» не является командой git. Смотрите «git --help».
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git --help
+использование: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Стандартные команды Git используемые в различных ситуациях:
+
+создать рабочую область (смотрите также: git help tutorial)
+   clone      Клонирование репозитория в новый каталог
+   init       Создание пустого репозитория Git или переинициализация существующего
+
+работа с текущими изменениями (смотрите также: git help everyday)
+   add        Добавление содержимого файла в индекс
+   mv         Перемещение или переименование файла, каталога или символьной ссылки
+   reset      Сброс текущего состояния HEAD на указанное состояние
+   rm         Удаление файлов из рабочего каталога и индекса
+
+просмотр истории и текущего состояния (смотрите также: git help revisions)
+   bisect     Использовать двоичный поиск изменения, которое вносит ошибку
+   grep       Вывод строк, соответствующих шаблону
+   log        Вывод истории коммитов
+   show       Вывод различных типов объектов
+   status     Вывод состояния рабочего каталога
+
+выращивание, отметка и настройка вашей общей истории
+   branch     Вывод списка, создание или удаление веток
+   checkout   Переключение веток или восстановление файлов в рабочем каталоге
+   commit     Запись изменений в репозиторий
+   diff       Вывод разницы между коммитами, коммитом и рабочим каталогом и т.д.
+   merge      Объединение одной или нескольких историй разработки вместе
+   rebase     Повторно применить коммиты над верхушкой другой ветки
+   tag        Создание, вывод списка, удаление или проверка метки, подписанной с помощью GPG
+
+совместная работа (смотрите также: git help workflows)
+   fetch      Загрузка объектов и ссылок из другого репозитория
+   pull       Извлечение изменений и объединение с другим репозиторием или локальной веткой
+   push       Обновление внешних ссылок и связанных объектов
+
+«git help -а» и «git help -g» выводит список доступных подкоманд и
+некоторые руководства по темам. Запустите «git help <команда>» или
+«git help <термин>», чтобы прочесть о конкретных подкоманде или теме.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls .git/refs
+heads  tags
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls .git/refs/heads
+master
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls .git/refs/tags
+v1  v1-beta
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat .git/refs/tags/v1
+c5136d32beffd9314e1249719030aad33f2cf4bf
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat .git/HEAD
+ref: refs/heads/master
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --max-count=1
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> master) [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -t 7dce84c
+commit
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p 7dce84c
+tree efd04e6c47c0db0ad7bb5a742824804908603b23
+parent 12473281c1a89a1e50d9896084e3271e8d1758cd
+author Balanovskiy <ybalanovskiy@yahoo.com> 1500431745 +0300
+committer Balanovskiy <ybalanovskiy@yahoo.com> 1500431745 +0300
+
+Add index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git dump
+использование: git cat-file (-t [--allow-unknown-type]|-s [--allow-unknown-type]|-e|-p|<тип>|--textconv) <объект>
+          или: git cat-file (--batch | --batch-check) [--follow-symlinks]
+
+<тип> может быть одним из: blob, tree, commit, tag
+    -t                    показать тип объекта
+    -s                    показать размер объекта
+    -e                    выйти с нулевым кодом возврата, если нет ошибки
+    -p                    структурированный вывод содержимого объекта
+    --textconv            запустить texconv на содержимом двоичных объектов 
+    --allow-unknown-type  разрешить -s и -t работать с повреждёнными объектами
+    --buffer              буфферировать вывод --batch
+    --batch[=<формат>]    показать информацию и содержимое объектов, переданных из стандартного ввода
+    --batch-check[=<формат>]
+                          показать информацию об объектах, переданных из стандартного ввода
+    --follow-symlinks     переходить по символьным ссылкам внутри дерева (используется с опциями --batch и --batch-check)
+    --batch-all-objects   показать все объекты с опциями --batch или --batch-check
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p efd04e6
+100644 blob 53c116ff0160b0be387174e9314fffce25c38f5a	index.html
+040000 tree 376e8e0d8168ecf57ef2674f12a980e44c3cb3f4	lib
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p 376e8e
+100644 blob a2a9bf60719716246683ec6cb27850bc48d49e1e	hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p a2a9b
+<!-- Author: Yaroslav Balanovskiy (ybalanovskiy@yahoo.com) -->
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p 6b1643
+tree 0d9cc1355883b976c07d5a06a31f17990f470d62
+author Balanovskiy <ybalanovskiy@yahoo.com> 1500400054 +0300
+committer Balanovskiy <ybalanovskiy@yahoo.com> 1500400054 +0300
+
+First Commit
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p 0d9cc1
+100644 blob 802992c4220de19a90767f3000a79a31b98d0df7	hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cat-file -p 802992
+Hello world
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# 
+
+
+
+
+-----------------------После перерыва----------------------------
+root@101balkancar:~# cd 'Рабочий стол/стажеровка/git_tutorial/work'
+bash: cd: Рабочий стол/стажеровка/git_tutorial/work: Нет такого файла или каталога
+root@101balkancar:~# cd 'Рабочий стол/Стажеровка/git_tutorial/work'
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# gitx
+bash: gitx: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# gitk
+bash: gitk: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git tag
+v1
+v1-beta
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Стандартные команды Git используемые в различных ситуациях:
+
+создать рабочую область (смотрите также: git help tutorial)
+   clone      Клонирование репозитория в новый каталог
+   init       Создание пустого репозитория Git или переинициализация существующего
+
+работа с текущими изменениями (смотрите также: git help everyday)
+   add        Добавление содержимого файла в индекс
+   mv         Перемещение или переименование файла, каталога или символьной ссылки
+   reset      Сброс текущего состояния HEAD на указанное состояние
+   rm         Удаление файлов из рабочего каталога и индекса
+
+просмотр истории и текущего состояния (смотрите также: git help revisions)
+   bisect     Использовать двоичный поиск изменения, которое вносит ошибку
+   grep       Вывод строк, соответствующих шаблону
+   log        Вывод истории коммитов
+   show       Вывод различных типов объектов
+   status     Вывод состояния рабочего каталога
+
+выращивание, отметка и настройка вашей общей истории
+   branch     Вывод списка, создание или удаление веток
+   checkout   Переключение веток или восстановление файлов в рабочем каталоге
+   commit     Запись изменений в репозиторий
+   diff       Вывод разницы между коммитами, коммитом и рабочим каталогом и т.д.
+   merge      Объединение одной или нескольких историй разработки вместе
+   rebase     Повторно применить коммиты над верхушкой другой ветки
+   tag        Создание, вывод списка, удаление или проверка метки, подписанной с помощью GPG
+
+совместная работа (смотрите также: git help workflows)
+   fetch      Загрузка объектов и ссылок из другого репозитория
+   pull       Извлечение изменений и объединение с другим репозиторием или локальной веткой
+   push       Обновление внешних ссылок и связанных объектов
+
+«git help -а» и «git help -g» выводит список доступных подкоманд и
+некоторые руководства по темам. Запустите «git help <команда>» или
+«git help <термин>», чтобы прочесть о конкретных подкоманде или теме.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# gti hist
+bash: gti: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout hello.html
+error: pathspec 'hello.html' did not match any file(s) known to git.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls .git
+branches        config       HEAD   index  logs     ORIG_HEAD
+COMMIT_EDITMSG  description  hooks  info   objects  refs
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# ls -C .git
+branches        config       HEAD   index  logs     ORIG_HEAD
+COMMIT_EDITMSG  description  hooks  info   objects  refs
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# help ls
+bash: help: no help topics match `ls'.  Try `help help' or `man -k ls' or `info ls'.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# info ls
+bash: info: команда не найдена
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# man ls
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Стандартные команды Git используемые в различных ситуациях:
+
+создать рабочую область (смотрите также: git help tutorial)
+   clone      Клонирование репозитория в новый каталог
+   init       Создание пустого репозитория Git или переинициализация существующего
+
+работа с текущими изменениями (смотрите также: git help everyday)
+   add        Добавление содержимого файла в индекс
+   mv         Перемещение или переименование файла, каталога или символьной ссылки
+   reset      Сброс текущего состояния HEAD на указанное состояние
+   rm         Удаление файлов из рабочего каталога и индекса
+
+просмотр истории и текущего состояния (смотрите также: git help revisions)
+   bisect     Использовать двоичный поиск изменения, которое вносит ошибку
+   grep       Вывод строк, соответствующих шаблону
+   log        Вывод истории коммитов
+   show       Вывод различных типов объектов
+   status     Вывод состояния рабочего каталога
+
+выращивание, отметка и настройка вашей общей истории
+   branch     Вывод списка, создание или удаление веток
+   checkout   Переключение веток или восстановление файлов в рабочем каталоге
+   commit     Запись изменений в репозиторий
+   diff       Вывод разницы между коммитами, коммитом и рабочим каталогом и т.д.
+   merge      Объединение одной или нескольких историй разработки вместе
+   rebase     Повторно применить коммиты над верхушкой другой ветки
+   tag        Создание, вывод списка, удаление или проверка метки, подписанной с помощью GPG
+
+совместная работа (смотрите также: git help workflows)
+   fetch      Загрузка объектов и ссылок из другого репозитория
+   pull       Извлечение изменений и объединение с другим репозиторием или локальной веткой
+   push       Обновление внешних ссылок и связанных объектов
+
+«git help -а» и «git help -g» выводит список доступных подкоманд и
+некоторые руководства по темам. Запустите «git help <команда>» или
+«git help <термин>», чтобы прочесть о конкретных подкоманде или теме.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git help checkout
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout -b style
+Переключено на новую ветку «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 7dce84c 2017-07-19 | Add index.html (HEAD -> style, master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке style
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch lib/style.css
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# vi lib/style.css
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat lib/style.css
+h1{
+	color: red;
+}
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add lib/style.css
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git co,,ir -m 'Added css stylesheet'
+git: «co,,ir» не является командой git. Смотрите «git --help».
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Added css stylesheet'
+[style 5b98fb5] Added css stylesheet
+ 1 file changed, 4 insertions(+)
+ create mode 100644 lib/style.css
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# vi lib/hello.html
+
+[1]+  Stopped                 vi lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# vi lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add lib/hello.hrml
+fatal: спецификация пути «lib/hello.hrml» не соответствует ни одному файлу
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Hello uses style.css'
+[style a90a15b] Hello uses style.css
+ 1 file changed, 1 insertion(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке style
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      index.html
+	изменено:      lib/hello.html
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	lib/.hello.html.swp
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add lib/hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m --amend 'Hello uses style.css'
+error: pathspec 'Hello uses style.css' did not match any file(s) known to git.
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке style
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      lib/hello.html
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      index.html
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	lib/.hello.html.swp
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit --amend -m 'Hello uses style.css'
+[style 9371bbc] Hello uses style.css
+ Date: Wed Jul 19 18:43:11 2017 +0300
+ 1 file changed, 1 insertion(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add index.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m 'Updated index.html'
+[style 702f0fe] Updated index.html
+ 1 file changed, 3 insertions(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке style
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+	lib/.hello.html.swp
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git rm lib/.hello.swp
+fatal: спецификация пути «lib/.hello.swp» не соответствует ни одному файлу
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git rm lib/.hello.html.swp 
+fatal: спецификация пути «lib/.hello.html.swp» не соответствует ни одному файлу
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git rm lib/hello.html.swpfatal: спецификация пути «lib/hello.html.swp» не соответствует ни одному файлу
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git st
+На ветке style
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	.gitconfig
+
+ничего не добавлено в коммит, но есть неотслеживаемые файлы (используйте «git add», чтобы отслеживать их)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist
+* 702f0fe 2017-07-19 | Updated index.html (HEAD -> style) [Balanovskiy]
+* 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html (master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git hist --all
+* 702f0fe 2017-07-19 | Updated index.html (HEAD -> style) [Balanovskiy]
+* 9371bbc 2017-07-19 | Hello uses style.css [Balanovskiy]
+* 5b98fb5 2017-07-19 | Added css stylesheet [Balanovskiy]
+* 7dce84c 2017-07-19 | Add index.html (master) [Balanovskiy]
+* 1247328 2017-07-19 | Moved hello.html to lib [Balanovskiy]
+* 905d53c 2017-07-19 | Add an author/e-mail comment [Balanovskiy]
+* c5136d3 2017-07-18 | Added HTML header (tag: v1) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags (tag: v1-beta) [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git cjeckout master
+git: «cjeckout» не является командой git. Смотрите «git --help».
+
+Возможно, вы имели в виду это?
+	checkout
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout master
+Переключено на ветку «master»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat lib/hello.html
+<!-- Author: Yaroslav Balanovskiy (ybalanovskiy@yahoo.com) -->
+<html>
+<head>
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git branch
+* master
+  style
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git checkout style
+Переключено на ветку «style»
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# cat lib/hello.html
+<!-- Author: Yaroslav Balanovskiy (ybalanovskiy@yahoo.com) -->
+<html>
+<head>
+<link type="text/css" rel="stylesheet" media="all" href="style.css" />
+</head>
+<body>
+<h1>Hello world</h1>
+</body>
+</html>
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# 
+
+

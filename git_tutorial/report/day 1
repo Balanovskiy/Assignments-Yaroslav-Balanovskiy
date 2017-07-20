@@ -1,0 +1,208 @@
+Выполнено 11 шагов
+
+root@101balkancar:~# apt-get install git
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлен пакет git самой новой версии (1:2.9.3-1).
+git установлен вручную.
+обновлено 0, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 7 пакетов не обновлено.
+
+root@101balkancar:~# git config --global user.name "Balanovskiy"
+root@101balkancar:~# git config --global user.email "ybalanovskiy@yahoo.com"
+root@101balkancar:~# git config --global core.autocrlf input
+root@101balkancar:~# git config --global core.safecrlf true
+root@101balkancar:~# cd Рабочий\ стол
+root@101balkancar:~/Рабочий стол# cd Стажеровка
+root@101balkancar:~/Рабочий стол/Стажеровка# cd git_tutorial
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial# cd work
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# mkdir hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work# cd hello
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git init
+Инициализирован пустой репозиторий Git в /root/Рабочий стол/Стажеровка/git_tutorial/work/hello/.git/
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m "First Commit"
+[master (корневой коммит) 6b16435] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+nothing to commit, working tree clean
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      hello.html
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      hello.html
+
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit
+[master 71f96fe] Added h1 tag
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+nothing to commit, working tree clean
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add hello.html
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      hello.html
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m "Added standard HTML page tags"
+[master 909f289] Added standard HTML page tags
+ 1 file changed, 4 insertions(+)
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status 
+На ветке master
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      hello.html
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git add .
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      hello.html
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git commit -m "Added HTML header"
+[master c5136d3] Added HTML header
+ 1 file changed, 2 insertions(+)
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git status
+На ветке master
+nothing to commit, working tree clean
+
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log
+commit c5136d32beffd9314e1249719030aad33f2cf4bf
+Author: Balanovskiy <ybalanovskiy@yahoo.com>
+Date:   Tue Jul 18 21:45:51 2017 +0300
+
+    Added HTML header
+
+commit 909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e
+Author: Balanovskiy <ybalanovskiy@yahoo.com>
+Date:   Tue Jul 18 21:42:05 2017 +0300
+
+    Added standard HTML page tags
+
+commit 71f96fe75699b9cc8403387c32c1cb20360fdac2
+Author: Balanovskiy <ybalanovskiy@yahoo.com>
+Date:   Tue Jul 18 21:27:41 2017 +0300
+
+    Added h1 tag
+
+commit 6b16435dbed57d8095033bc60501303338aa6912
+Author: Balanovskiy <ybalanovskiy@yahoo.com>
+Date:   Tue Jul 18 20:47:34 2017 +0300
+
+    First Commit
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+71f96fe75699b9cc8403387c32c1cb20360fdac2 Added h1 tag
+6b16435dbed57d8095033bc60501303338aa6912 First Commit
+
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+71f96fe75699b9cc8403387c32c1cb20360fdac2 Added h1 tag
+6b16435dbed57d8095033bc60501303338aa6912 First Commit
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline --all
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+71f96fe75699b9cc8403387c32c1cb20360fdac2 Added h1 tag
+6b16435dbed57d8095033bc60501303338aa6912 First Commit
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline --author=balanovskiy
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+71f96fe75699b9cc8403387c32c1cb20360fdac2 Added h1 tag
+6b16435dbed57d8095033bc60501303338aa6912 First Commit
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline --author=balanovski
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+71f96fe75699b9cc8403387c32c1cb20360fdac2 Added h1 tag
+6b16435dbed57d8095033bc60501303338aa6912 First Commit
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline --author=bala
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+71f96fe75699b9cc8403387c32c1cb20360fdac2 Added h1 tag
+6b16435dbed57d8095033bc60501303338aa6912 First Commit
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=oneline --max-count=2
+c5136d32beffd9314e1249719030aad33f2cf4bf Added HTML header
+909f2890d6d2bc5dd3cf2dc5398ac88bef454d3e Added standard HTML page tags
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=format:"%h %cd %s (%an)" --since="7 days ago"
+c5136d3 Tue Jul 18 21:45:51 2017 +0300 Added HTML header (Balanovskiy)
+909f289 Tue Jul 18 21:42:05 2017 +0300 Added standard HTML page tags (Balanovskiy)
+71f96fe Tue Jul 18 21:27:41 2017 +0300 Added h1 tag (Balanovskiy)
+6b16435 Tue Jul 18 20:47:34 2017 +0300 First Commit (Balanovskiy)
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+* c5136d3 2017-07-18 | Added HTML header (HEAD -> master) [Balanovskiy]
+* 909f289 2017-07-18 | Added standard HTML page tags [Balanovskiy]
+* 71f96fe 2017-07-18 | Added h1 tag [Balanovskiy]
+* 6b16435 2017-07-18 | First Commit [Balanovskiy]
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.co checkout
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.ci commit
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.st status
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.br branch
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.type 'cat-file -t'
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# git config --global alias.dump 'cat-file -p'
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch .gitconfig
+
+root@101balkancar:~/Рабочий стол/Стажеровка/git_tutorial/work/hello# touch .profile

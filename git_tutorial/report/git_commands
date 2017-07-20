@@ -1,0 +1,193 @@
+Установка настроек Имя/E-mail
+git config --global user.name "Your Name"
+git config --global user.email "your_email@whatever.com"
+
+Установка глобальных переменных Unix/Mac
+git config --global core.autocrlf input
+git config --global core.safecrlf true
+
+Установка глобальных переменных Windows
+git config --global core.autocrlf true
+git config --global core.safecrlf true
+
+Создание папки с файлом
+mkdir hello
+cd hello
+touch hello.html
+
+Инициализация репозитория (Внутри корневой папки проекта)
+git init
+
+Добавить изменные файлы в индекс
+git add hello.html
+
+Фиксация изменений с коментарием (Изменения вне индекса в комит не входят)
+git commit -m "First Commit"
+
+Проверка статуса git
+git status
+
+Просмотр логов git (история git)
+git log
+git log --pretty=oneline
+git log --pretty=oneline --max-count=2
+git log --pretty=oneline --since='5 minutes ago'
+git log --pretty=oneline --until='5 minutes ago'
+git log --pretty=oneline --author=<your name>
+git log --pretty=oneline --all
+git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+    --pretty="..." - defines the output format.
+    %h - is the abbreviated hash of the commit
+    %d - commit decorations (e.g. branch heads or tags)
+    %ad - is the commit date
+    %s - is the comment
+    %an - is the name of the author
+    --graph - tells git to display the commit tree in the form of an ASCII graph layout
+    --date=short - keeps the date format short and nice
+
+Добавить алиасы для Windows
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.br branch
+git config --global alias.hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+git config --global alias.type 'cat-file -t'
+git config --global alias.dump 'cat-file -p'
+
+Добавить алиасы для Unix/Mac
+Создать файл .gitconfig в $HOME директории
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+Получение старых версий
+git checkout <hash>
+
+Возврат к ветке master
+git checkout master
+
+Создать тег для версии
+git tag v1
+
+Перейти к родительской версии
+git checkout v1^
+
+Просмотр тегов
+git tag
+
+Просмотр ВСЕХ логов git (hist==type(alias))
+git hist master --all
+
+Отмена изменений до добавления в индекс
+git checkout hello.html
+
+Удаление изменений из индекса
+git reset HEAD hello.html
+
+Отмена commit созданием новой фиксации которая удалит изменения
+git revert HEAD
+git revert HEAD --no-edit (без редактирования комментариев и файлов)
+
+Удаление комитов
+	Сначала отмечаем последний комит (что бы потом его найти)
+	git tag oops
+
+	Сбрасываем комиты до версии v1 (можно hash) (--hard - обновление рабочего каталока)
+	git reset --hard v1
+
+	Теперь этик фиксаций в ветке нет но они есть в истории (т.е. в репозитории)
+	Это из-за того что мы их отметили тегом и сборщик мусора их не уничтожает
+
+	Удалить тег по названию
+	git tag -d oops
+
+Редактирование комита
+	После добавление в индекс и фиксации
+	Изменяем файл
+	Добавляем в индекс
+	Комитим с флагом --amend (коментарий перезаписывается)
+	git commit --amend -m "Comment"
+
+	В истории один (изменный) комит
+
+Премещение файлов
+mkdir lib
+git mv hello.html lib (Происходит удаление hello.html и создание lib/hello.html)
+
+Или
+mkdir lib
+mv hello.html lib
+git add lib/hello.html 
+git rm hello.html
+
+Просмотр файлов (объектов git) (-t - type, -p - dump)
+git cat-file -t <hash>
+git cat-file -p <hash>
+
+Создание новой ветки
+git checkout -b <branch name>
+
+Премещение между ветками
+git checkout <branch name>
+
+Слияние двух веток (переходим на ветку и указываем master)
+(Истории у каждой ветки свои)
+git checkout <brach>
+git merge master
+
+Перебазирование master в style
+(Истории одинаковы у веток)
+git checkout style
+git rebase master
+(После перебазирование почемуто делается слияние)
+git checkout master
+git merge style
+
+Клонирование репозитория
+git clone <rep name> <rep cloned name>
+
+Извлечение изменений из удаленного репозитория
+git fetch
+И слияние получиных изменений с локаддьным репозиторием
+git merge origin/master
+
+Эквивалент 
+git pull
+
+Создание локальной ветки для отслеживание внешней оригитальной
+(так как у нас только master)
+git branch --track style origin/style
+
+Просмотр веток
+git branch -a
+
+Создание чистого репозитория
+git clone --bare hello hello.git
+
+добавление репозиторя hello.git к оригинальному репозиторию
+(в качестве удаленного репозитория)
+cd hello
+git remote add shared ../hello.git
+
+Отправка изменений на общий репозиторий hello.git
+(Нужно явно указать ветку изменений)
+git push shared master
+
+Отслеживание общих измениней
+git remote add shared ../hello.git
+git branch --track shared master
+git pull
+
+
+Размещение git репозиториев
+	Запуск git сервера
+	git daemon --verbose --export-all --base-path=.
+
+	Клонирование
+	git clone git://localhost/hello.git network_hello
