@@ -1,0 +1,37 @@
+0000000000000000000000000000000000000000 d851edda3009332dd5d3f8f949a102f279dad809 Balanovskiy <ybalanovskiy@yahoo.com> 1501001850 +0300	clone: from https://github.com/git-game/git-game
+d851edda3009332dd5d3f8f949a102f279dad809 640273807f9bac8af03575f82b788663d4b99927 Balanovskiy <ybalanovskiy@yahoo.com> 1501002724 +0300	checkout: moving from master to 64027
+640273807f9bac8af03575f82b788663d4b99927 d851edda3009332dd5d3f8f949a102f279dad809 Balanovskiy <ybalanovskiy@yahoo.com> 1501002885 +0300	checkout: moving from 640273807f9bac8af03575f82b788663d4b99927 to master
+d851edda3009332dd5d3f8f949a102f279dad809 640273807f9bac8af03575f82b788663d4b99927 Balanovskiy <ybalanovskiy@yahoo.com> 1501002890 +0300	checkout: moving from master to 64027
+640273807f9bac8af03575f82b788663d4b99927 98491edbe9121d1a2b521c5ea658b191a0c54224 Balanovskiy <ybalanovskiy@yahoo.com> 1501002896 +0300	checkout: moving from 640273807f9bac8af03575f82b788663d4b99927 to bug
+98491edbe9121d1a2b521c5ea658b191a0c54224 640273807f9bac8af03575f82b788663d4b99927 Balanovskiy <ybalanovskiy@yahoo.com> 1501002916 +0300	checkout: moving from bug to 64027
+640273807f9bac8af03575f82b788663d4b99927 98491edbe9121d1a2b521c5ea658b191a0c54224 Balanovskiy <ybalanovskiy@yahoo.com> 1501002942 +0300	checkout: moving from 640273807f9bac8af03575f82b788663d4b99927 to bug
+98491edbe9121d1a2b521c5ea658b191a0c54224 ce59bbfd5b04ece742e799c68bf94af2c46281d4 Balanovskiy <ybalanovskiy@yahoo.com> 1501003108 +0300	checkout: moving from bug to ce59bb
+ce59bbfd5b04ece742e799c68bf94af2c46281d4 98491edbe9121d1a2b521c5ea658b191a0c54224 Balanovskiy <ybalanovskiy@yahoo.com> 1501003490 +0300	checkout: moving from ce59bbfd5b04ece742e799c68bf94af2c46281d4 to bug
+98491edbe9121d1a2b521c5ea658b191a0c54224 3922a6d86ec4b0ea00c7b7414e96ffd3b2f65f45 Balanovskiy <ybalanovskiy@yahoo.com> 1501003521 +0300	checkout: moving from bug to 3922a6
+3922a6d86ec4b0ea00c7b7414e96ffd3b2f65f45 ce59bbfd5b04ece742e799c68bf94af2c46281d4 Balanovskiy <ybalanovskiy@yahoo.com> 1501003568 +0300	checkout: moving from 3922a6d86ec4b0ea00c7b7414e96ffd3b2f65f45 to ce59bb
+ce59bbfd5b04ece742e799c68bf94af2c46281d4 98491edbe9121d1a2b521c5ea658b191a0c54224 Balanovskiy <ybalanovskiy@yahoo.com> 1501003611 +0300	checkout: moving from ce59bbfd5b04ece742e799c68bf94af2c46281d4 to bug
+98491edbe9121d1a2b521c5ea658b191a0c54224 fb6fd3074a3277c277ecd9f31bbb2316fcbe48c8 Balanovskiy <ybalanovskiy@yahoo.com> 1501003658 +0300	checkout: moving from bug to fb6fd
+fb6fd3074a3277c277ecd9f31bbb2316fcbe48c8 fb6fd3074a3277c277ecd9f31bbb2316fcbe48c8 Balanovskiy <ybalanovskiy@yahoo.com> 1501003769 +0300	checkout: moving from fb6fd3074a3277c277ecd9f31bbb2316fcbe48c8 to 3922a
+fb6fd3074a3277c277ecd9f31bbb2316fcbe48c8 125426877335b4d4a174b7f9c5c9703a1ff7f219 Balanovskiy <ybalanovskiy@yahoo.com> 1501003907 +0300	checkout: moving from 3922a to LinusTorvalds2014
+125426877335b4d4a174b7f9c5c9703a1ff7f219 f5c5727388ecfea996ca81ed32e57026955111f7 Balanovskiy <ybalanovskiy@yahoo.com> 1501005432 +0300	checkout: moving from LinusTorvalds2014 to tree
+f5c5727388ecfea996ca81ed32e57026955111f7 7378b2e3defe8d77b8b95099f341d5f0649a1e80 Balanovskiy <ybalanovskiy@yahoo.com> 1501006137 +0300	checkout: moving from tree to code4life
+7378b2e3defe8d77b8b95099f341d5f0649a1e80 6ecc8f85ebdc36fdbac9c588305fa72af6402441 Balanovskiy <ybalanovskiy@yahoo.com> 1501006258 +0300	commit (merge): Change file
+6ecc8f85ebdc36fdbac9c588305fa72af6402441 f5c5727388ecfea996ca81ed32e57026955111f7 Balanovskiy <ybalanovskiy@yahoo.com> 1501006298 +0300	checkout: moving from code4life to tree
+f5c5727388ecfea996ca81ed32e57026955111f7 6ecc8f85ebdc36fdbac9c588305fa72af6402441 Balanovskiy <ybalanovskiy@yahoo.com> 1501006387 +0300	checkout: moving from tree to code4life
+6ecc8f85ebdc36fdbac9c588305fa72af6402441 7378b2e3defe8d77b8b95099f341d5f0649a1e80 Balanovskiy <ybalanovskiy@yahoo.com> 1501006430 +0300	checkout: moving from code4life to HEAD^
+7378b2e3defe8d77b8b95099f341d5f0649a1e80 231676093bb16cf333ac38a08ccbf5b2025d26ca Balanovskiy <ybalanovskiy@yahoo.com> 1501006546 +0300	commit (merge): new change
+231676093bb16cf333ac38a08ccbf5b2025d26ca f5c5727388ecfea996ca81ed32e57026955111f7 Balanovskiy <ybalanovskiy@yahoo.com> 1501006556 +0300	checkout: moving from 231676093bb16cf333ac38a08ccbf5b2025d26ca to tree
+f5c5727388ecfea996ca81ed32e57026955111f7 6ecc8f85ebdc36fdbac9c588305fa72af6402441 Balanovskiy <ybalanovskiy@yahoo.com> 1501006601 +0300	checkout: moving from tree to 6ecc
+6ecc8f85ebdc36fdbac9c588305fa72af6402441 f5c5727388ecfea996ca81ed32e57026955111f7 Balanovskiy <ybalanovskiy@yahoo.com> 1501006691 +0300	checkout: moving from 6ecc8f85ebdc36fdbac9c588305fa72af6402441 to f5c5
+f5c5727388ecfea996ca81ed32e57026955111f7 6ecc8f85ebdc36fdbac9c588305fa72af6402441 Balanovskiy <ybalanovskiy@yahoo.com> 1501006704 +0300	merge code4life: Fast-forward
+6ecc8f85ebdc36fdbac9c588305fa72af6402441 6ecc8f85ebdc36fdbac9c588305fa72af6402441 Balanovskiy <ybalanovskiy@yahoo.com> 1501006778 +0300	checkout: moving from 6ecc8f85ebdc36fdbac9c588305fa72af6402441 to code4life
+6ecc8f85ebdc36fdbac9c588305fa72af6402441 7378b2e3defe8d77b8b95099f341d5f0649a1e80 Balanovskiy <ybalanovskiy@yahoo.com> 1501006795 +0300	checkout: moving from code4life to HEAD^
+7378b2e3defe8d77b8b95099f341d5f0649a1e80 6ecc8f85ebdc36fdbac9c588305fa72af6402441 Balanovskiy <ybalanovskiy@yahoo.com> 1501006850 +0300	checkout: moving from 7378b2e3defe8d77b8b95099f341d5f0649a1e80 to code4life
+6ecc8f85ebdc36fdbac9c588305fa72af6402441 a61b5e6574bc7146556517d7b0464d77f63c52be Balanovskiy <ybalanovskiy@yahoo.com> 1501006878 +0300	commit: Change
+a61b5e6574bc7146556517d7b0464d77f63c52be 9cc552e746e29280a3c269a5c34498529dee25ed Balanovskiy <ybalanovskiy@yahoo.com> 1501006938 +0300	checkout: moving from code4life to mouse
+9cc552e746e29280a3c269a5c34498529dee25ed 05888e5aff9eb3d7937a84d1ef621946bc44acca Balanovskiy <ybalanovskiy@yahoo.com> 1501007965 +0300	checkout: moving from mouse to 05888
+05888e5aff9eb3d7937a84d1ef621946bc44acca 9cc552e746e29280a3c269a5c34498529dee25ed Balanovskiy <ybalanovskiy@yahoo.com> 1501011007 +0300	checkout: moving from 05888e5aff9eb3d7937a84d1ef621946bc44acca to mouse
+9cc552e746e29280a3c269a5c34498529dee25ed 05ce931b31f265abc8ac649e2687792e00f44807 Balanovskiy <ybalanovskiy@yahoo.com> 1501011318 +0300	checkout: moving from mouse to Henry
+05ce931b31f265abc8ac649e2687792e00f44807 51e4359ba5986580780dc11cbae1b727546dd9d6 Balanovskiy <ybalanovskiy@yahoo.com> 1501011487 +0300	checkout: moving from 05ce931b31f265abc8ac649e2687792e00f44807 to Henry
+51e4359ba5986580780dc11cbae1b727546dd9d6 d851edda3009332dd5d3f8f949a102f279dad809 Balanovskiy <ybalanovskiy@yahoo.com> 1501011680 +0300	checkout: moving from Henry to master
+d851edda3009332dd5d3f8f949a102f279dad809 de791254c644d4cfaef43a36541f7d70a9aa7cb4 Balanovskiy <ybalanovskiy@yahoo.com> 1501011795 +0300	pull upstream master: Fast-forward

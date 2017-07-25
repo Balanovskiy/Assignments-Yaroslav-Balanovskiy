@@ -1,0 +1,32 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/git-game/git-game
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "bug"]
+	remote = origin
+	merge = refs/heads/bug
+[branch "LinusTorvalds2014"]
+	remote = origin
+	merge = refs/heads/LinusTorvalds2014
+[branch "tree"]
+	remote = origin
+	merge = refs/heads/tree
+[branch "code4life"]
+	remote = origin
+	merge = refs/heads/code4life
+[branch "mouse"]
+	remote = origin
+	merge = refs/heads/mouse
+[branch "Henry"]
+	remote = origin
+	merge = refs/heads/Henry
+[remote "upstream"]
+	url = https://github.com/drami025/git-game.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
