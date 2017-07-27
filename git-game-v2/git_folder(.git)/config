@@ -1,0 +1,58 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/git-game/git-game-v2.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "29"]
+	remote = origin
+	merge = refs/heads/29
+[branch "30"]
+	remote = origin
+	merge = refs/heads/30
+[branch "6861"]
+	remote = origin
+	merge = refs/heads/6861
+[branch "snowden"]
+	remote = origin
+	merge = refs/heads/snowden
+[branch "anon"]
+	remote = origin
+	merge = refs/heads/anon
+[branch "pretty"]
+	remote = origin
+	merge = refs/heads/pretty
+[branch "SIGPOLL"]
+	remote = origin
+	merge = refs/heads/SIGPOLL
+[submodule "Bugs"]
+	url = https://github.com/anon-atlas/Bugs.git
+[submodule "Java"]
+	url = https://github.com/anon-atlas/Java
+[submodule "Leaf"]
+	url = https://github.com/anon-atlas/Leaf.git
+[submodule "Trees"]
+	url = https://github.com/anon-atlas/Trees.git
+[branch "history"]
+	remote = origin
+	merge = refs/heads/history
+[branch "cherry"]
+	remote = origin
+	merge = refs/heads/cherry
+[branch "arachnid"]
+	remote = origin
+	merge = refs/heads/arachnid
+[branch "insect"]
+	remote = origin
+	merge = refs/heads/insect
+[branch "lighthouse"]
+	remote = origin
+	merge = refs/heads/lighthouse
+[branch "root"]
+	remote = origin
+	merge = refs/heads/root

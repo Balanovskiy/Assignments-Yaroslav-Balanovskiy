@@ -1,0 +1,34 @@
+git bisect start
+# good: [3942179d67afda95097f41452aa8dc44dde5f0dd] Initial commit
+git bisect good 3942179d67afda95097f41452aa8dc44dde5f0dd
+# bad: [662efa39a0fe03b8a162417677e66342c22bd1b2] updated README
+git bisect bad 662efa39a0fe03b8a162417677e66342c22bd1b2
+# bad: [7998e39b11389cf2ed5c830204dbe08188d529be] empty commit
+git bisect bad 7998e39b11389cf2ed5c830204dbe08188d529be
+# bad: [3497f1a909354bd76f0bdcdb0e043f2d5068d96c] empty commit
+git bisect bad 3497f1a909354bd76f0bdcdb0e043f2d5068d96c
+# bad: [bd1858d52b81c8a8d7d05f69353b934841565a6d] empty commit
+git bisect bad bd1858d52b81c8a8d7d05f69353b934841565a6d
+# bad: [ac86870b15bf8bb06b15bf683906d5eecde9a7ce] empty commit
+git bisect bad ac86870b15bf8bb06b15bf683906d5eecde9a7ce
+# bad: [f86b0afb26c0ec0c6293a1317af705eec14e1957] empty commit
+git bisect bad f86b0afb26c0ec0c6293a1317af705eec14e1957
+# bad: [de271878f2b3d122f53c9902ea47e0c473799469] empty commit
+git bisect bad de271878f2b3d122f53c9902ea47e0c473799469
+# bad: [b47cbf94fadae5d19c6e70632221cf0843848d02] empty commit
+git bisect bad b47cbf94fadae5d19c6e70632221cf0843848d02
+# bad: [1d1a811b951fc14d9e2c510dabfb62e26fcfe6a0] empty commit
+git bisect bad 1d1a811b951fc14d9e2c510dabfb62e26fcfe6a0
+# bad: [d76ede130ea230a4bd7c25bf2e67b8da48332690] Adding show
+git bisect bad d76ede130ea230a4bd7c25bf2e67b8da48332690
+# good: [10b441625f478032c369a827850fc2990a3626dd] Adding above
+git bisect good 10b441625f478032c369a827850fc2990a3626dd
+# good: [f682c6211075b5025cfc5b5b820b6276005ea248] Adding the
+git bisect good f682c6211075b5025cfc5b5b820b6276005ea248
+# bad: [e06bb40ae71cf6b925bb65b6330c535214dc7022] Adding When
+git bisect bad e06bb40ae71cf6b925bb65b6330c535214dc7022
+# bad: [fd8673785769f62b1dca4e5bd480edfb0d87e995] adding racecar
+git bisect bad fd8673785769f62b1dca4e5bd480edfb0d87e995
+# good: [e9809db70f548500283159ab573a404ba83d033b] Adding sun
+git bisect good e9809db70f548500283159ab573a404ba83d033b
+# first bad commit: [fd8673785769f62b1dca4e5bd480edfb0d87e995] adding racecar
