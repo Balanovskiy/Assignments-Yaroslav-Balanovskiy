@@ -1,0 +1,3 @@
+[submodule "GuiExam"]
+	path = GuiExam
+	url = https://github.com/Balanovskiy/GuiExam
